@@ -12,15 +12,39 @@
   <link rel="stylesheet" href="/css/estilo.css" >
   
 </head>
+<style>
+  div.panel,p.flip
+{
+    width: 70px;
+    padding:5px;
+    margin-top: 100px;
+    text-align:center;
+    background:#e5eecc;
+    border:solid 1px #c3c3c3;
+    position:fixed;
+   
+       
+}
+div.panel
+{
+    position:fixed;
+    bottom: 29px;
+    width: 200px;
+    height: auto;
+    display:none;
+    text-align:left;
+    z-index:1;
+}
+  </style>
 <body>
 
     <div class="wrapper">
     <article class="content">
         <h1>AREA DO ALUNO</h1><br> 
         <h3>Chat</h3>
-
-        <label for="materia">Qual a materia</label>
-        <select name="materia" id="materia">
+        <form name="meu_form">
+          <select>
+            <option value="">Selecionar a materia</option>
             <option value="portugues">Português</option>
             <option value="matematica">Matemática</option>
             <option value="geografia">Geográfia</option>
@@ -28,26 +52,27 @@
             <option value="ingles">Inglês</option>
             <option value="arte">Arte</option>
             <option value="edfisica">Educação Fisica</option>
-          
-        </select> <br>
-
-        <form name="meu_form">
+          </select>
 
           <h1>Entre em contato</h1>
-        
-          <input type="text" id="nomeid" placeholder="Tiago Vale" required="required" name="nome" />
           <label for="nome">Nome</label>
+          <input type="text" id="nome" placeholder="João" required="required" name="nome" />
+          <br>       
+          <textarea placeholder="Deixe sua mensagem"></textarea>
         
-          <input type="tel" id="foneid" placeholder="(xx)xx-xx-xx-xx" name="fone" />
-          <label for="fone">Fone</label>
-        
-          <input type="email" id="emailid" placeholder="fulano@mail.com" name="email" />
-          <label for="email">Email</label>
-        
-          <textarea placeholder="Deixe sua opnião"></textarea>
-        
-          <input type="submit" class="enviar" onclick="Enviar();" value="Enviar" />
+          <input type="submit" class="enviar" onclick="msg();" value="Enviar" />
         </form>
+
+        <div class="container">
+          <div class="btns">
+
+             <p><button onclick="chats()">Caixa De Entrada</button></p>
+
+          </div>
+       </div>
+      
+        <table id="tabelaB"></table>
+
 
     </article>
     <aside class="side">      
@@ -58,7 +83,7 @@
         <li><a href="/aluno/calendario/calendario.html">Calendario</a></li>
         <li><a href="/aluno/calendario/atvextra/atvextra.html">Atividade Extras</a></li>
         <li><a href="/aluno/calendario/atvextra/Chat/chat.html">Fale com um instrutor</a></li>
-        <li><a href="#">Disciplinas</a></li>
+        <li><a href="/aluno/calendario/atvextra/Chat/Conteudo/conteudo.html">Disciplinas</a></li>
       </ul>
     </aside>
     </div>
@@ -75,16 +100,80 @@
       </div>
     </footer>
   </div>
+
+  <script>
+    function msg(){
+
+      validar();
+      //alert("Mensagem Enviada com sucesso!");
+    }
+
+    function validar(){
+
+      var nome = document.getElementById("nome");
+      if(nome.value == ""){
+        alert("Nome não informado");
+        nome.focus();
+      }
+      else{
+        alert("mensagem enviada com sucesso!")
+      }
+    }
+
+</script>
+<script src="/aluno/calendario/atvextra/Chat/chat.js"></script>
+
+<style>
+  table, th, td{
+ 
+ font-family:  Arial, Helvetica, sans-serif;
+ border: 1px solid black;
+ /* border-collapse: collapse; */
+}
+
+
+.btns{
+    display: inline-flex; 
+   /* margin-right: auto;
+   margin-left: auto;  */
+   /* width: 420px;
+   height: 55px; */
+   /* border: none;
+   border-radius: 0;
+   background-color: white;
+   font-size: 20px;
+   cursor: pointer; */
+  /* position: absolute; */
+  /* width: 150px;
+  height: 55px; */
+  border-radius: 7px;
+  overflow:  hidden;
+  align-items: center;
+  justify-content: center;
+  background-color: white ;
+  
+}
+
+
+
+
+
+
+
+
+</style>
+
+<footer>
+    <div>
+      <p>Escola Bhaskara Akira | © Todos os direitos reservados</p>
+      <ul class="main-footer">
+        <li><a href="#"><img src="/img/facebook.png" width="39"></a></li>
+        <li><a href="#"><img src="/img/Instagram.png" width="43" ></a></li>
+        <li><a href="#"><img src="/img/whats.png" width="40"></a></li>
+      </ul>
+    </div>
+  </footer>
 </body>
 
-<script>
-function Enviar() {
 
-  var nome = document.getElementById("nomeid");
-
-  if (nome.value != "") {
-      alert('Obrigado sr(a) ' + nome.value + ' os seus dados foram encaminhados com sucesso');
-  }
-
-}</script>
 </html>

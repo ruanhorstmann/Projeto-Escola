@@ -1,19 +1,12 @@
 [
     {
+    "codigo":1,
     "nome":"Fernando",
-    "reponsavel":"Claudia",
+    "responsavel":"Claudia",
     "email":"fernando@gmail.com",
-    "idade": 9,
+    "idade": 14,
+    "turma": "6 B",
     "statussativextr": true,
     "ativextra": ["Judo"]
-    },
-
-    {
-        "nome":"Julia",
-        
-        "email":"julia@gmail.com",
-        "idade": 15,
-        "statussativextr": false,
-        "ativextra": [null]
     }
 ]
