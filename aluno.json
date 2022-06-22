@@ -1,0 +1,31 @@
+[
+    {
+    "codigo":1,
+    "nome":"Fernando",
+    "reponsavel":"Claudia",
+    "email":"fernando@gmail.com",
+    "idade": 14,
+    "turma": "6 B",
+    "statussativextr": true,
+    "ativextra": ["Judo"]
+    },
+
+    {
+        "nome":"Julia",
+        "reponsavel": "Maria",
+        "email":"julia@gmail.com",
+        "idade": 15,
+        "turma": "7 A",
+        "statussativextr": false,
+        "ativextra": [null]
+    },
+    
+    {
+        "nome":"Enzo",
+        "reponsavel":"Roberta",
+        "email":"roberta@gmail.com",
+        "idade": 10,
+        "statussativextr": true,
+        "ativextra": ["Futebol"]
+    }
+]
