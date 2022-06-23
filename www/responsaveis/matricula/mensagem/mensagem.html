@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escola Bhaskara Akira</title>
+
+  <!-- Imagem na aba do navegador-->
+  <link rel="icon" type="imagem/png" href="/img/logo_aba.png">
+  <link rel="stylesheet" href="/css/normalize.css" > 
+  <link rel="stylesheet" href="/css/estilo.css" >
+  
+</head>
+<body>
+
+    <div class="wrapper">
+    <article class="content">
+        <h1>FALE CONOSCO</h1><br> 
+
+     
+    <form style="width: 220px;">
+
+        <label for="nome"><h3>Nome:</h3></label>
+        <input type="text" id="nome" placeholder="Suellen Lima" name="nome" required="required"/>
+        
+        
+        <label for="email"><h3>Email:</h3></label>
+        <input type="text" id="email" placeholder="fulano@gmail.com" name="email" required="required"/>
+        
+        
+        <label for="mensagem"><h3>Escreva sua mensagem:</h3></label>
+        <textarea id="mensagem" placeholder="Deixe sua mensagem..."></textarea>
+
+        
+        
+        <button type="button" class="btn btn-success" onclick="msg()" value="Enviar"><h3>Enviar</h3></button>
+
+    </form>
+
+    </article>
+    <aside class="side">      
+      <div>
+      <ul>
+        <a class="logo" href="/index.html"><img src="/img/Logo.png"></a>
+        <li><a href="/responsaveis/matricula/matricula.html">Matricula</a></li>
+        <li><a href="/responsaveis/matricula/mensagem/mensagem.html">Caixa de mensagens</a></li>
+        <li><a href="/responsaveis/matricula/mensagem/financeiro/financeiro.html">Financeiro</a></li>
+        <li><a href="/responsaveis/matricula/mensagem/financeiro/aluno/aluno.html">Aluno</a></li>
+      </ul>
+    </aside>
+    </div>
+
+    <footer>
+      <div>
+        <p>Escola Bhaskara Akira | © Todos os direitos reservados</p>
+        <ul class="main-footer">
+          <li><a href="#"><img src="/img/facebook.png" width="38"></a></li>
+          <li><a href="#"><img src="/img/Instagram.png" width="43" ></a></li>
+          <li><a href="#"><img src="/img/whats.png" width="41"></a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+
+function msg(){
+
+validar();
+//alert("Mensagem Enviada com sucesso!");
+}
+
+function validar(){
+
+var nome = document.getElementById("mensagem");
+if(mensagem.value == ""){
+  alert("O campo mensagem não foi preenchido");
+  mensagem.focus();
+}
+else{
+  alert("Mensagem enviada com sucesso!")
+}
+}
+
+  </script>
+</body>
+</html>
