@@ -8,7 +8,7 @@ function chats (){
                 Professor:"Luiz",
                 Materia: "Matematica",
                 
-                mensagem: "Olá, seu msg foi recebida Fernando.",            
+                mensagem: "Olá Fernando, sua mensagem foi recebida.",            
                 
             }
     
@@ -19,7 +19,7 @@ function chats (){
     
     const objchat = JSON.parse(chatJson)
     
-    let chats = "<tr><td>Professor(a):</td><td>Matéria:</td><td>mensagem:</td><td>";
+    let chats = "<tr><td>Professor(a):</td><td>Matéria:</td><td>Mensagem:</td><td>";
     
     objchat.map(function(itemA, indexA){
         chats += "<tr>";

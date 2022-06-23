@@ -28,9 +28,9 @@
       <div>
       <ul>
         <a class="logo" href="/index.html"><img src="/img/Logo.png"></a>
-        <li><a href="/aluno/aluno.html"><h3>Fernando</h3></a></li>
+        <li><a href="/aluno/aluno.html"><h4>Fernando</h4></a></li>
         <li><a href="/aluno/calendario/calendario.html">Agenda</a></li>
-        <li><a href="/aluno/calendario/atvextra/atvextra.html">Atividade Extras</a></li>
+        
         <li><a href="/aluno/calendario/atvextra/Chat/chat.html">Fale com um instrutor</a></li>
         <li><a href="/aluno/calendario/atvextra/Chat/Conteudo/conteudo.html">Conteúdo</a></li>
       </ul>
@@ -68,12 +68,15 @@
                     const item = document.createElement('li');
                     const item2 = document.createElement('li');
                     const item3 = document.createElement('li');
+                    const item4 = document.createElement('li');
                     item.innerText =  aluno.nome;
                     item2.innerText = aluno.responsavel;
                     item3.innerText = aluno.turma;
+                    item4.innerText = aluno.faltas;
                     lista.appendChild(item);  
                     lista.appendChild(item2); 
-                    lista.appendChild(item3);     
+                    lista.appendChild(item3);
+                    lista.appendChild(item4);     
                 }
             });
 

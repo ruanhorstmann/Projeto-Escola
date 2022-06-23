@@ -3,9 +3,11 @@
     "codigo":1,
     "nome":"Fernando",
     "responsavel":"Claudia",
-    "email":"fernando@gmail.com",
+    "email":"fernando@bhaskaraakira.com",
+    "email responsavel":"claudia@gmail.com",
     "idade": 14,
     "turma": "6 B",
+    "faltas": "4",
     "statussativextr": true,
     "ativextra": ["Judo"]
     }
